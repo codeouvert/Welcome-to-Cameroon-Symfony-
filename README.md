@@ -18,7 +18,7 @@ Je m'appelle **Yassin El Kamal NGUESSU** et je suis un **développeur backend** 
 
 ## Prérequis
 
-- PHP 7.2
+- PHP 8.1
 - Composer
 - MySQL 8.0
 - Symfony CLI
