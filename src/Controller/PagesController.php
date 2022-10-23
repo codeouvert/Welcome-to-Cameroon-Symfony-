@@ -9,13 +9,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class PagesController extends AbstractController
 {
     #[Route(
-        '/pages',
-        name: 'app_pages',
+        '/',
+        name: 'app_home',
+        methods: ['GET'],
     )]
-    public function index(): Response
+    public function home(): Response
     {
-        return $this->render('pages/index.html.twig', [
-            'controller_name' => 'PagesController',
-        ]);
+        return $this->render('pages/home.html.twig');
     }
 }

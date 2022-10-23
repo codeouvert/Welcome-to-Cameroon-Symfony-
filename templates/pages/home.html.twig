@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block title 'Welcome to Cameroon!' %}
+
+{% block body %}
+    <img src="{{ asset('/images/image1.png') }}" alt="Cameroon Flag" width="300px" class="mt-12 rounded shadow-md">
+
+    <h1 class="mt-5 text-3xl sm:text-5xl text-center font-semibold text-yellow-600">Welcome to Cameroon!</h1>
+    
+    <p class="mt-5 text-lg text-gray-800">
+        It's currenlty
+        <span id="display">
+            <script language="JavaScript">
+                function currentTime()
+                {
+                    var date = new Date();
+                    var hrs = date.getHours();
+                    var min = date.getMinutes();
+                    var sec = date.getSeconds();
+
+                    time = " "+((hrs<10)?"0":"") +hrs+":";
+                    time += ((min<10)?"0":"")+min+":";
+                    time += ((sec<10)?"0":"")+sec+" ";
+
+                    document.getElementById('display').innerHTML=time;
+                    compte=setTimeout('currentTime()',100);
+                }
+                currentTime();
+            </script>
+        </span>
+    </p>
+{% endblock %}
