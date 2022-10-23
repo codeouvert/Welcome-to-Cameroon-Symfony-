@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="300">
+
+        <title>{% block title %}Welcome to Cameroon{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        {% endblock %}  
+    </head>
+
+    <body class="flex flex-col justify-between items-center min-h-screen">
+
+        <main role="main" class='my-6 flex flex-col items-center justify-center'>
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer class='my-6'>
+            <p class='text-gray-400'>
+                &copy; Copyright {{ 'now'|date('Y',) }} &middot;
+                <a href="{{ path('app_about') }}" class='text-yellow-500 hover:text-green-600 underline'>About Us</a>
+            </p>
+        </footer>
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </body>
+    
+</html>
