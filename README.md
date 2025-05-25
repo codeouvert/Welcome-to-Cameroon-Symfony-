@@ -89,7 +89,7 @@ git commit -m "Initial commit"
 git branch #Voir la branche sur laquelle on est
 git remote -v  #Voir les remotes
 git remote add originGitlab git@gitlab.com:code-ouvert/welcome-to-cameroon-symfony.git
-git remote add originGithub https://github.com/codeouvert/Welcome-to-Cameroon-Symfony-.git
+git remote add originGithub https://github.com/codeouvert/Welcome-to-Cameroon-Symfony.git
 git push --set-upstream originGitlab main
 git push -u originGithub main
 ```
